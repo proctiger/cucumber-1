@@ -1,18 +1,26 @@
 require 'sinatra'
+require_relative 'transaction_queue'
+require_relative 'account'
+# require_relative 'balance_store'
 
-class Account
-  def credited(amount)
-    @balance = amount
-  end
+# class Account
+#   def initialize
+#     @queue = TransactionQueue.new
+#     @balance_store = BalanceStore.new
+#   end
+
+#   def credited(amount)
+#     @queue.write("+#{amount}")
+#   end
   
-  def balance
-    @balance
-  end
+#   def balance
+#     @balance_store.balance
+#   end
 
-  def debit(amount)
-    @balance -= amount
-  end
-end
+#   def debit(amount)
+#     @queue.write("-#{amount}")
+#   end
+# end
 
 class Teller
   def initialize(cash_slot)

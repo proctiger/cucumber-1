@@ -1,3 +1,8 @@
+Before do
+	# BalanceStore.new.balance = 0
+	TransactionQueue.clear
+end
+
 # Before do |scenario|
 # 	puts "Starting scenario #{scenario.name}"
 # end

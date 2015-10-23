@@ -1,5 +1,3 @@
-require 'byebug'
-
 module KnowsTheUserInterface
   class UserInterface
     include Capybara::DSL
@@ -23,4 +21,40 @@ module KnowsTheUserInterface
     Sinatra::Application.cash_slot
   end
 end
+
+# module DelayedJobSupport
+#   def process_all_jobs
+#     Delayed::Worker.new.work_off(Delayed::Job.count)
+#     if ENV["FAIL_FAST"]
+#       raise Delayed::Job.first.last_error if Delayed::Job.count > 0
+#     end
+#   end
+# end
+
 World(KnowsTheUserInterface)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
